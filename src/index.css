@@ -1,68 +1,149 @@
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  
+ 
+  --bg-dark: #0f172a;
+  --bg-gradient: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1; 
+  --accent-blue: #2563eb;
+  --accent-blue-hover: #1d4ed8;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  overflow-x: hidden; 
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.hero-section {
+  position: relative;
+  z-index: 10; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+.hero-title {
+  font-size: 3.5rem; 
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #60a5fa, #a855f7); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; 
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+
+.button-group {
+  display: flex;
+  gap: 15px; 
+}
+
+.btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px; 
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease; 
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.btn-primary {
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5); 
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-blue-hover);
+  transform: translateY(-2px); 
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #475569;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+
+.stars-wrapper {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0; 
+}
+
+@keyframes animStar {
+  from { transform: translateY(0px); opacity: 0.3; }
+  to { transform: translateY(-30px); opacity: 0.8; }
+}
+
+
+.stars-small {
+  width: 1px; height: 1px; background: transparent;
+  box-shadow: 
+    10vw 10vh #fff, 20vw 55vh #fff, 30vw 20vh #fff, 85vw 12vh #fff, 
+    40vw 80vh #fff, 90vw 90vh #fff, 15vw 60vh #fff, 60vw 35vh #fff,
+    25vw 15vh #fff, 70vw 20vh #fff, 50vw 50vh #fff, 95vw 40vh #fff,
+    12vw 82vh #fff, 38vw 42vh #fff, 66vw 18vh #fff, 92vw 74vh #fff,
+    45vw 10vh #fff, 05vw 95vh #fff, 88vw 33vh #fff, 55vw 65vh #fff;
+  animation: animStar 2s linear infinite alternate;
+  animation: animStar 3s step(5, end) infinite alternate;
+}
+
+.stars-medium {
+  width: 2px; height: 2px; background: transparent;
+  box-shadow: 
+    15vw 15vh #a5f3fc, 55vw 45vh #a5f3fc, 85vw 25vh #fff, 
+    25vw 85vh #fff, 65vw 75vh #a5f3fc, 45vw 5vh #fff;
+  animation: animStar 3s linear infinite alternate;
+  animation: animStar 3s step(5, end) infinite alternate;
+}
+
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem; 
   }
-  a:hover {
-    color: #747bff;
+  .hero-subtitle {
+    font-size: 1rem;
   }
-  button {
-    background-color: #f9f9f9;
+  .button-group {
+    flex-direction: column; 
+    width: 100%;
+  }
+  .btn {
+    width: 100%; 
   }
 }
