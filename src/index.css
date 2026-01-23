@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   background: var(--bg-gradient);
   color: var(--text-primary);
-  overflow-x: hidden; 
+  overflow: hidden; 
 }
 
 
@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-  height: 100vh; 
+  height: 90vh; 
   padding: 0 20px;
   text-align: center;
 }
@@ -51,11 +51,18 @@ body {
   color: transparent; 
 }
 
-.hero-subtitle {
+.hero-subtitle1 {
   font-size: 1.25rem;
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
   max-width: 600px;
+
+}
+.hero-subtitle2 {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 0rem;
 }
 
 
@@ -129,6 +136,46 @@ body {
     25vw 85vh #fff, 65vw 75vh #a5f3fc, 45vw 5vh #fff;
   animation: animStar 3s linear infinite alternate;
   animation: animStar 3s step(5, end) infinite alternate;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid #334155;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  z-index: 20;
+  margin-bottom: 10px;
+}
+
+.nav-btn {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid #334155;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.nav-btn.active {
+  background: var(--accent-blue);
+  color: white;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.45);
 }
 
 
