@@ -1,196 +1,50 @@
 
+@import "tailwindcss";
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  
- 
-  --bg-dark: #0f172a;
   --bg-gradient: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  --text-primary: #ffffff;
-  --text-secondary: #cbd5e1; 
-  --accent-blue: #2563eb;
-  --accent-blue-hover: #1d4ed8;
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
-  min-height: 100vh;
   background: var(--bg-gradient);
-  color: var(--text-primary);
-  overflow: hidden; 
-}
-
-
-.app-container {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-}
-
-.hero-section {
-  position: relative;
-  z-index: 10; 
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  height: 90vh; 
-  padding: 0 20px;
-  text-align: center;
-}
-
-
-.hero-title {
-  font-size: 3.5rem; 
-  font-weight: 800;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #60a5fa, #a855f7); 
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; 
-}
-
-.hero-subtitle1 {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  margin-bottom: 2.5rem;
-  max-width: 600px;
-
-}
-.hero-subtitle2 {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin-bottom: 0rem;
-}
-
-
-.button-group {
-  display: flex;
-  gap: 15px; 
-}
-
-.btn {
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 50px; 
-  cursor: pointer;
-  transition: all 0.3s ease; 
-}
-
-.btn-primary {
-  background-color: var(--accent-blue);
   color: white;
-  border: none;
-  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5); 
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
 }
-
-.btn-primary:hover {
-  background-color: var(--accent-blue-hover);
-  transform: translateY(-2px); 
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: white;
-  border: 2px solid #475569;
-}
-
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: white;
-}
-
 
 .stars-wrapper {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
+  inset: 0;
   pointer-events: none;
-  z-index: 0; 
+  z-index: 0;
 }
 
 @keyframes animStar {
-  from { transform: translateY(0px); opacity: 0.3; }
-  to { transform: translateY(-30px); opacity: 0.8; }
+  from { transform: translateY(0px); opacity: 0.35; }
+  to { transform: translateY(-30px); opacity: 0.85; }
 }
 
-
 .stars-small {
-  width: 1px; height: 1px; background: transparent;
-  box-shadow: 
-    10vw 10vh #fff, 20vw 55vh #fff, 30vw 20vh #fff, 85vw 12vh #fff, 
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    10vw 10vh #fff, 20vw 55vh #fff, 30vw 20vh #fff, 85vw 12vh #fff,
     40vw 80vh #fff, 90vw 90vh #fff, 15vw 60vh #fff, 60vw 35vh #fff,
     25vw 15vh #fff, 70vw 20vh #fff, 50vw 50vh #fff, 95vw 40vh #fff,
     12vw 82vh #fff, 38vw 42vh #fff, 66vw 18vh #fff, 92vw 74vh #fff,
-    45vw 10vh #fff, 05vw 95vh #fff, 88vw 33vh #fff, 55vw 65vh #fff;
-  animation: animStar 2s linear infinite alternate;
-  animation: animStar 3s step(5, end) infinite alternate;
+    45vw 10vh #fff, 5vw 95vh #fff, 88vw 33vh #fff, 55vw 65vh #fff;
+  animation: animStar 3s 3s infinite alternate;
 }
 
 .stars-medium {
-  width: 2px; height: 2px; background: transparent;
-  box-shadow: 
-    15vw 15vh #a5f3fc, 55vw 45vh #a5f3fc, 85vw 25vh #fff, 
-    25vw 85vh #fff, 65vw 75vh #a5f3fc, 45vw 5vh #fff;
-  animation: animStar 3s linear infinite alternate;
-  animation: animStar 3s step(5, end) infinite alternate;
-}
-
-.bottom-nav {
-  position: fixed;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  padding: 10px 14px;
-  background: rgba(15, 23, 42, 0.75);
-  border: 1px solid #334155;
-  border-radius: 999px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
-  z-index: 20;
-  margin-bottom: 10px;
-}
-
-.nav-btn {
+  width: 2px;
+  height: 2px;
   background: transparent;
-  color: var(--text-primary);
-  border: 1px solid #334155;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.nav-btn:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
-}
-
-.nav-btn.active {
-  background: var(--accent-blue);
-  color: white;
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 12px rgba(37, 99, 235, 0.45);
-}
-
-
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 2.5rem; 
-  }
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  .button-group {
-    flex-direction: column; 
-    width: 100%;
-  }
-  .btn {
-    width: 100%; 
-  }
+  box-shadow:
+    15vw 15vh #a5f3fc, 55vw 45vh #a5f3fc, 85vw 25vh #fff,
+    40vw 100vh #fff, 65vw 75vh #a5f3fc, 45vw 5vh #fff;
+  animation: animStar 4s 2s infinite alternate;
 }

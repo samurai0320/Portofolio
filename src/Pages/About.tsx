@@ -1,9 +1,7 @@
 export default function About() {
   return (
-    <div className="hero-section">
-      <h1 className="hero-title">About Me</h1>
-      <p className="hero-subtitle">Ini adalah halaman About</p>
-      <p>Konten tentang dirimu...</p>
+    <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
+      <h1 className="text-4xl font-bold mb-3">About Me</h1>
     </div>
   )
 }

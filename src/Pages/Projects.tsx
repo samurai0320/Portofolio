@@ -1,9 +1,7 @@
 export default function Projects() {
   return (
-    <div className="hero-section">
-      <h1 className="hero-title">My Projects</h1>
-      <p className="hero-subtitle">Daftar proyek-proyek saya</p>
-      <p>Proyek-proyek kamu ditampilkan di sini...</p>
+    <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
+      <h1 className="text-4xl font-bold mb-3">My Projects</h1>
     </div>
   )
 }

@@ -1,9 +1,7 @@
 export default function Skills() {
   return (
-    <div className="hero-section">
-      <h1 className="hero-title">My Skills</h1>
-      <p className="hero-subtitle">Skills yang saya kuasai</p>
-      <p>React, TypeScript, CSS, JavaScript, etc...</p>
+    <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
+      <h1 className="text-4xl font-bold mb-3">My Skills</h1>
     </div>
   )
 }
