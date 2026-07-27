@@ -1,7 +1,7 @@
 const skillCategories = [
   {
     title: "Web Development",
-    skills: ["HTML/CSS", "JavaScript", "TypeScript", "Laravel (PHP)", "MySQL", "PostgreSQL", "React", "Next.js"],
+    skills: ["HTML/CSS", "JavaScript", "TypeScript", "Laravel (PHP)", "MySQL", "PostgreSQL", "React"],
   },
   {
     title: "Mobile Development",
