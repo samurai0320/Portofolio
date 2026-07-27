@@ -42,22 +42,22 @@ export default function About() {
               </h2>
 
               {[
-                { icon: "•", title: "High Motivation", desc: "Eager to learn and grow continuously" },
-                { icon: "•", title: "Team Collaboration", desc: "Communication & Leadership" },
-                { icon: "•", title: "Problem Solving", desc: "Logical thinking & Creativity" },
-                { icon: "•", title: "Adaptability", desc: "Quick to adjust and embrace new challenges" },
+                { title: "High Motivation", desc: "Eager to learn and grow continuously" },
+                { title: "Team Collaboration", desc: "Communication & Leadership" },
+                { title: "Problem Solving", desc: "Logical thinking & Creativity" },
+                { title: "Adaptability", desc: "Quick to adjust and embrace new challenges" },
               ].map((skill, index) => (
                 <div
                   key={index}
                   className="p-4 rounded-lg border border-gray-700 bg-gray-900/50 backdrop-blur-sm hover:border-gray-500 hover:bg-gray-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer group"
                 >
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-2xl">{skill.icon}</span>
+                    <span className="w-3 h-3 rounded-full bg-blue-500 flex-shrink-0 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
                     <h3 className="font-semibold text-lg text-white transition-colors">
                       {skill.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-white ml-11 transition-colors">
+                  <p className="text-sm text-white ml-6 transition-colors">
                     {skill.desc}
                   </p>
                 </div>
