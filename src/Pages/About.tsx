@@ -42,10 +42,10 @@ export default function About() {
               </h2>
 
               {[
-                { icon: "🚀", title: "High Motivation", desc: "Eager to learn and grow continuously" },
-                { icon: "🤝", title: "Team Collaboration", desc: "Communication & Leadership" },
-                { icon: "⚡", title: "Problem Solving", desc: "Logical thinking & Creativity" },
-                { icon: "🎯", title: "Adaptability", desc: "Quick to adjust and embrace new challenges" },
+                { icon: "•", title: "High Motivation", desc: "Eager to learn and grow continuously" },
+                { icon: "•", title: "Team Collaboration", desc: "Communication & Leadership" },
+                { icon: "•", title: "Problem Solving", desc: "Logical thinking & Creativity" },
+                { icon: "•", title: "Adaptability", desc: "Quick to adjust and embrace new challenges" },
               ].map((skill, index) => (
                 <div
                   key={index}
